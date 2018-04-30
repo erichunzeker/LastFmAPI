@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import '../stylesheets/App.css';
-import {GetResults} from "./GetResults";
 import ReactDOM from 'react-dom';
+import {GetTopAlbums} from "./GetTopAlbums";
+import {GetTopArtists} from "./GetTopArtists";
 
 
 
@@ -29,7 +30,7 @@ export class UsernameForm extends Component {
 
 
     handleSubmit(event) {
-        ReactDOM.render(<UsernameForm name={this.state.name} action={this.state.action} />, document.getElementById('root'));
+        ReactDOM.render(<UsernameForm name={this.state.name}/>, document.getElementById('root'));
 
     }
 
@@ -42,14 +43,16 @@ export class UsernameForm extends Component {
                         <input type="text" value={this.state.name} placeholder="last.fm username" onChange={this.handleNameChange}/>
                     </label>
 
-                    <select defaultValue="gettopartists" onChange={this.handleActionChange}>
+                    <select defaultValue={this.state.action} onChange={this.handleActionChange}>
                         <option value="gettopartists">Top Artists</option>
                         <option value="gettopalbums">Top Albums</option>
                     </select>
                 </form>
 
 
-                <GetResults name={this.state.name} action={this.state.action}/>
+                <GetTopAlbums name={this.state.name} action={this.state.action}/>
+                <GetTopArtists name={this.state.name} action={this.state.action}/>
+
             </div>
 
         );
