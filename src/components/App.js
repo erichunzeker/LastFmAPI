@@ -6,7 +6,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <UsernameForm name="" action="gettopartists" period="7days" limit="5"/>
+                <UsernameForm name="" action="gettopartists" period="overall" limit="10"/>
             </div>
         );
   }

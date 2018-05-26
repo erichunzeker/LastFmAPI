@@ -13,7 +13,7 @@ export class UsernameForm extends Component {
         this.state = {
             name: props.name,
             action: props.action,
-            period: props.period,
+            period: props.period
         };
 
         this.handleNameChange = this.handleNameChange.bind(this);
@@ -37,11 +37,11 @@ export class UsernameForm extends Component {
 
 
     handleSubmit(event) {
-        ReactDOM.render(<UsernameForm name={this.state.name} action={this.state.action} period={this.state.period} />, document.getElementById('root'));
+        ReactDOM.render(
+            <UsernameForm name={this.state.name} action={this.state.action} period={this.state.period} />, document.getElementById('root'));
     }
 
     render() {
-
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
