@@ -40,6 +40,11 @@ input[type=text]:focus {
   padding-left: 5%;
 }
 
+.resultcard {
+  display: inline-block;
+  padding: 2%;
+}
+
 .topresults[img] {
   size: 22px;
 }
